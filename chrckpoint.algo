@@ -1,0 +1,22 @@
+ALGORITHM checkpoint algo1
+VAR
+ var  c:CHAR:=""
+ var  char_count:=0
+ var  voy_count:=0
+ var  word_count:=0
+BEGIN
+    WHILE (c <> ".") DO
+   Read(c)
+       char_count=char_count+1
+   IF (c=" ") THEN
+       word_count=word_count+1
+   END_IF
+   IF (c = "a" OR c="e" OR c="i" OR c="o" OR c="u" OR c="y") THEN
+       voy_count=voy_count+1
+   END_IF
+
+    END_WHILE
+    Write("The length of the sentence is ",char_count);
+    Write("The number of words in the sentence is ",word_count+1);
+    Write("he number of vowels in the sentence. is ",voy_count);
+END
